@@ -22,7 +22,7 @@ require_once get_template_directory() .  '/includes/template-setup.php';
 require_once get_template_directory() .  '/includes/template-functions.php';
 /*
 Set up support for Woocommerce. If not needed, feel free to comment out
-the following include "includes/template-woocommerce-support.php" to save
+the following include "includes/template-woocommerce-setup.php" to save
 on code execution
 */
-require_once get_template_directory() .  '/includes/template-woocommerce-support.php';
+require_once get_template_directory() .  '/includes/template-woocommerce-setup.php';

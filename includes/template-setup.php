@@ -31,7 +31,9 @@ function thdd_theme_support()
     add_theme_support('post-thumbnails');
     // Refresh Widgets
     add_theme_support('customize-selective-refresh-widgets');
+
     // Custom Background
+
     /*
     $thedd_bg_args = [
         'default-image'          => '',
@@ -42,7 +44,9 @@ function thdd_theme_support()
     ];
     add_theme_support( 'custom-background', $thedd_bg_args );
     */
+
     // Custom Header
+
     /*
     $thedd_header_args = [
         'default-image'          => '',
@@ -56,7 +60,9 @@ function thdd_theme_support()
     ];
     add_theme_support( 'custom-header', $thedd_header_args );
     */
+
     // Custom Logo
+
     /*
     $thedd_logo_args = [
         'height'      => '##',
@@ -66,32 +72,7 @@ function thdd_theme_support()
         'header-text' => array('site-title', 'site-description'),
     ];
     add_theme_support('custom-logo', $thedd_logo_args);
-    *//*
-    Add support for WC features
     */
 
-    // Add Woocommerce Support for WC features
-    add_theme_support('woocommerce', [
-        'thumbnail_image_width' => 150,
-        'single_image_width'    => 300,
-        'product_grid'          => [
-            'default_rows'    => 3,
-            'min_rows'        => 2,
-            'max_rows'        => 8,
-            'default_columns' => 4,
-            'min_columns'     => 2,
-            'max_columns'     => 6,
-        ],
-    ]);
-    add_theme_support( 'wc-product-gallery-zoom' );
-    add_theme_support( 'wc-product-gallery-lightbox' );
-    add_theme_support( 'wc-product-gallery-slider' );
 }
 add_action('after_setup_theme', 'thdd_theme_support');
-
-/*
-FILTERS
-*/
-
-// Remove WC Default styles
-add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
