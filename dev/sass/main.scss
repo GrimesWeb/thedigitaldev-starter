@@ -1,0 +1,32 @@
+/* Only imports should be used here, no direct css code - use files in folders */
+
+/* Abstract Imports */
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+/* Vendor Imports - If using bootstrap, jquery-ui, etc */
+
+/* Base Imports */
+@import 'base/reset';
+@import 'base/typography';
+
+/* Layout Imports */
+@import 'layout/grid';
+@import 'layout/navigation';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
+@import 'layout/forms';
+
+/* Component Imports */
+@import 'components/buttons';
+@import 'components/carousel';
+@import 'components/sliders';
+
+/* Pages Imports - If you need page specific styles */
+
+/* Theme Imports - Usually for plugin option pages, etc */
+@import 'themes/theme';
+@import 'themes/admin';
+
