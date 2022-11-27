@@ -15,7 +15,7 @@ sassDest = '../assets/css/';
 function generateCSS(cb) {
     var plugins = [
         autoprefixer(),
-        cssnano(),
+        //cssnano(),
     ];
     src(sassSrc)
     .pipe(sourcemaps.init())

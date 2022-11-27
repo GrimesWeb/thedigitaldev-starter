@@ -10,7 +10,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php get_header(); ?>
 <!-- Nothing above here - edit header content in header.php -->
-TEST
 
 <!-- Nothing below here, edit footer content in footer.php -->
 <?php get_footer(); ?>
