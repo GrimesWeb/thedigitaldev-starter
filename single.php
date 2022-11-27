@@ -1,6 +1,6 @@
 <?php
 /**
- * Page Template File - Used for single pages
+ * Single post Template File - Used for single posts
  */
 
 if (!defined('ABSPATH')) {
@@ -11,18 +11,18 @@ if (!defined('ABSPATH')) {
 <?php get_header(); ?>
 <!-- Nothing above here - edit header content in header.php -->
 
-Page Template
+Post(single) Template
 
 <?php
 if (have_posts()) : while (have_posts()) : the_post(); ?>
 
         <?php
         // Get content for single pages
-        get_template_part('template-parts/content', 'page');
+        get_template_part('template-parts/content');
         ?>
 
         <?php
-        // Display comments if they are open OR atleast 1 comment is added
+        // Display comments if they are open and atleast 1 comment is added
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
 			endif;
