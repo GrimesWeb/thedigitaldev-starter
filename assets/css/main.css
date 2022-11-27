@@ -1,0 +1,42 @@
+/* Only imports should be used here, no direct css code - use files in folders */
+/* Abstract Imports */
+/* Vendor Imports - If using bootstrap, jquery-ui, etc */
+/* Base Imports */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Layout Imports */
+/* Component Imports */
+/* Pages Imports - If you need page specific styles */
+/* Theme Imports - Usually for plugin option pages, etc */

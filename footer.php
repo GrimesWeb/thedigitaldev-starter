@@ -4,9 +4,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<footer>
+<!-- End Main Page Content -->
+</main>
 
-</footer>
+<footer></footer>
+<!-- End footer content, nothing below here -->
 <?php wp_footer(); ?>
 </body>
 </html>

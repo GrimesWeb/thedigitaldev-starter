@@ -18,3 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) {
     <header id="masthead">
 
     </header>
+
+    <main id="primary" class="site-main">
+        <!-- Begin Main content -->
