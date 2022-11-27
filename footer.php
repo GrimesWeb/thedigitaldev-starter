@@ -4,8 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<!-- End Main Page Content -->
 </main>
+<!-- End Main Page Content -->
 
 <footer></footer>
 <!-- End footer content, nothing below here -->
