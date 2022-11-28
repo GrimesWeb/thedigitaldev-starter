@@ -16,7 +16,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 <body <?php body_class(); ?>>
 
     <header id="masthead">
-
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+            <?php
+                // Nav args
+                $nav_args = [
+                    'theme_location' => 'header-menu'
+                ];
+            ?>
+            <?php wp_nav_menu($nav_args); ?>
+        </nav>
     </header>
 
     <main id="primary" class="site-main">

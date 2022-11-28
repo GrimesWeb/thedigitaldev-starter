@@ -76,3 +76,11 @@ function thdd_theme_support()
 
 }
 add_action('after_setup_theme', 'thdd_theme_support');
+
+// Register Menu Locations
+
+register_nav_menus([
+'header-menu' => esc_html__( 'Header Menu', 'thedd' ),
+//'footer-menu' => esc_html__( 'Footer Menu', 'thedd' )
+]);
+
