@@ -6,7 +6,7 @@ function thedd_enqueued_files()
     // Main CSS style for appearance > editor > style.css, enqueue everything below main-css
     wp_enqueue_style('default-css', get_stylesheet_uri());
     // Get main css stylesheet generated from SASS folder
-    wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/assets/css/main.css', array(), filemtime(get_stylesheet_directory() . '/assets/css/main.css'), false );
+    wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/assets/css/main.css', [], filemtime(get_stylesheet_directory() . '/assets/css/main.css'), false );
 }
 add_action('wp_enqueue_scripts', 'thedd_enqueued_files');
 /***** NOTHING SNIPPETS BELOW HERE - ONLY INCLUDES *****/
