@@ -15,7 +15,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 </head>
 <body <?php body_class(); ?>>
 
+    <!-- SKIP LINK - ACCESSBILITY -->
+    <a class=”screen-reader-text skip-link” href="#content">
+        <?php esc_html_e('Skip to content', 'thedd'); ?>
+    </a>
+
     <header id="masthead">
+
         <nav id="site-navigation" class="main-navigation" role="navigation">
             <?php
                 // Nav args
@@ -25,7 +31,8 @@ if ( ! defined( 'ABSPATH' ) ) {
             ?>
             <?php wp_nav_menu($nav_args); ?>
         </nav>
+
     </header>
 
-    <main id="primary" class="site-main">
+    <main id="content" class="site-main">
         <!-- Begin Main content -->
