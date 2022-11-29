@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Add in some additional functional code to the website
  */
@@ -73,14 +74,32 @@ function thdd_theme_support()
     ];
     add_theme_support('custom-logo', $thedd_logo_args);
     */
-
 }
 add_action('after_setup_theme', 'thdd_theme_support');
 
 // Register Menu Locations
 
-register_nav_menus([
-'header-menu' => esc_html__( 'Header Menu', 'thedd' ),
-//'footer-menu' => esc_html__( 'Footer Menu', 'thedd' )
-]);
+if (function_exists('register_nav_menus')) {
+    register_nav_menus([
+        'header-menu' => esc_html__('Header Menu', 'thedd'),
+        //'footer-menu' => esc_html__( 'Footer Menu', 'thedd' )
+    ]);
+}
 
+// Setup Widget Areas
+if (function_exists('register_sidebar')) {
+    function thedd_widget_init() {
+        $sidebar1 = [
+            'name' => esc_html__('Sidebar', 'thedd'),
+            'id' => 'main-sidebar',
+            'description' => esc_html__('Add widgets for main sidebar here', 'thedd'),
+            'before_widget' => '<div class="widget %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
+        ];
+        register_sidebar($sidebar1);
+    };
+
+}
+add_action('widgets_init', 'thedd_widget_init');

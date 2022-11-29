@@ -30,5 +30,12 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 
     <?php endwhile; endif; ?>
 
+    <?php
+        // Pull in sidebar if in use
+
+            get_sidebar();
+
+    ?>
+
 <!-- Nothing below here, edit footer content in footer.php -->
 <?php get_footer(); ?>
