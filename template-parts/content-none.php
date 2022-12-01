@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 ?>
 
-<section class="not-found">
+<section class="content-not-found">
     <header class="entry-header">
         <?php esc_html_e( 'Sorry, no posts match your criteria', 'thedd' ); ?>
     </header>
