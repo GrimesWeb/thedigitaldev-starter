@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Index template - used as last catch backup for blog posts
+ * Home template - Used as Blog page template
  */
 
 if (!defined('ABSPATH')) {
@@ -11,6 +11,8 @@ if (!defined('ABSPATH')) {
 
 <?php get_header(); ?>
 <!-- Nothing above here - edit header content in header.php -->
+
+<h1><?php wp_title(' '); ?></h1>
 
 <?php
 if (have_posts()) : while (have_posts()) : the_post();
