@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
-        <h1><?php the_title(); ?></h1>
+        <?php the_title('<h2>','</h2>'); ?>
         <p class="byline">
             <span class="entry-author">Author: <a href="<?php echo get_author_posts_url($post->post_author); ?>"><?php the_author(); ?></a></span>
             <span class="entry-date">Date: <?php the_time('M. j, Y'); ?></span>

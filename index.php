@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Index template - used as blog page template
  */
@@ -19,8 +20,11 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php get_template_part('template-parts/content'); ?>
 
     <?php endwhile; ?>
+
 <?php else : ?>
+
     <?php get_template_part('template-parts/content', 'none'); ?>
+
 <?php endif; ?>
 
 <!-- Nothing below here, edit footer content in footer.php -->
