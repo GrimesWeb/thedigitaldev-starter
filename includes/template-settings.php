@@ -10,7 +10,6 @@ if (!defined('ABSPATH')) {
 <?php
 // Replace the excerpt ellipses with a read more link
 function thedd_excerpt_more($more) {
-    $more = '<p><a class="moretag" href="'. get_permalink() . '">' . 'Read More' . '</a></p>';
-    return $more;
+    return '<p><a class="moretag" href="'. get_permalink() . '">' . 'Read More' . '</a></p>';
 }
 add_filter('excerpt_more', 'thedd_excerpt_more');
