@@ -12,15 +12,14 @@ if (!defined('ABSPATH')) {
 <?php get_header(); ?>
 <!-- Nothing above here - edit header content in header.php -->
 
-Page Template
-
 <?php
 if (have_posts()) : while (have_posts()) : the_post();
 ?>
 
-        <?php get_template_part('template-parts/content' , 'page'); ?>
+        <?php get_template_part('template-parts/content', 'page'); ?>
 
-    <?php endwhile; else : ?>
+    <?php endwhile;
+else : ?>
 
     <?php get_template_part('template-parts/content', 'none'); ?>
 

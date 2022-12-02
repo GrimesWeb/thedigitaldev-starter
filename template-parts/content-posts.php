@@ -8,7 +8,7 @@ if (!defined('ABSPATH')) {
 }
 ?>
 
-<section class="post-content">
+<section class="page-content">
 <a href="<?php echo esc_url( get_permalink() ); ?>"><?php esc_html_e( 'About MyBlog', 'textdomain' ); ?></a></li>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
