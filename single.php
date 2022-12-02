@@ -23,5 +23,10 @@ if (have_posts()) : while (have_posts()) : the_post();
 
 <?php endif; ?>
 
+<?php
+// Pull in sidebar if one is used
+get_sidebar('posts');
+?>
+
 <!-- Nothing below here, edit footer content in footer.php -->
 <?php get_footer(); ?>
