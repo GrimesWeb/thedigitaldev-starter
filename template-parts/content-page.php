@@ -31,5 +31,3 @@ if (!defined('ABSPATH')) {
     </article>
 
 </section>
-
-<?php the_content(); ?>

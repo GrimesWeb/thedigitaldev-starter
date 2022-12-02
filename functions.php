@@ -22,6 +22,8 @@ add_action('wp_enqueue_scripts', 'thedd_enqueued_files');
 require_once get_template_directory() .  '/includes/template-setup.php';
 // Template Functions
 require_once get_template_directory() .  '/includes/template-functions.php';
+// Template Settings
+require_once get_template_directory() .  '/includes/template-settings.php';
 /*
 Set up support for Woocommerce. If not needed, feel free to comment out
 the following include "includes/template-woocommerce-setup.php" to save
