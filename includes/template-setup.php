@@ -87,44 +87,6 @@ if (function_exists('register_nav_menus')) {
 }
 
 // Setup Widget Areas
-// if (function_exists('register_sidebar')) {
-//     function thedd_widget_init() {
-//         $main_sidebar = [
-//             'name' => esc_html__('Main Sidebar', 'thedd'),
-//             'id' => 'main-sidebar',
-//             'description' => esc_html__('Add widgets for main sidebar here', 'thedd'),
-//             'before_widget' => '<div class="widget %2$s">',
-//             'after_widget' => '</div>',
-//             'before_title' => '<h2 class="widget-title">',
-//             'after_title' => '</h2>',
-//         ];
-//         $page_sidebar = [
-//             'name' => esc_html__('Page Sidebar', 'thedd'),
-//             'id' => 'page-sidebar',
-//             'description' => esc_html__('Add widgets for page sidebar here', 'thedd'),
-//             'before_widget' => '<div class="widget %2$s">',
-//             'after_widget' => '</div>',
-//             'before_title' => '<h2 class="widget-title">',
-//             'after_title' => '</h2>',
-//         ];
-//         $post_sidebar = [
-//             'name' => esc_html__('Post Sidebar', 'thedd'),
-//             'id' => 'post-sidebar',
-//             'description' => esc_html__('Add widgets for post sidebar here', 'thedd'),
-//             'before_widget' => '<div class="widget %2$s">',
-//             'after_widget' => '</div>',
-//             'before_title' => '<h2 class="widget-title">',
-//             'after_title' => '</h2>',
-//         ];
-//         register_sidebar($main_sidebar);
-//         register_sidebar($post_sidebar);
-//         register_sidebar($page_sidebar);
-//     };
-
-// }
-// add_action('widgets_init', 'thedd_widget_init');
-
-// Setup Widget Areas
 if (function_exists('register_sidebar')) {
     function thedd_widget_init() {
         register_sidebar([
