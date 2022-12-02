@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Archive Template - Used for archive pages (Cats, CPT's, etc)
+ * Home template - Used as Blog page template
  */
 
 if (!defined('ABSPATH')) {
@@ -12,29 +12,18 @@ if (!defined('ABSPATH')) {
 <?php get_header(); ?>
 <!-- Nothing above here - edit header content in header.php -->
 
-Archive Template
+<h1><?php the_archive_title(); ?></h1>
 
 <?php
-if (have_posts()) : while (have_posts()) : the_post(); ?>
+if (have_posts()) : while (have_posts()) : the_post();
+?>
 
-        <?php
-        the_archive_title('<h1 class="page-title">', '</h1>');
-        ?>
+        <?php get_template_part('template-parts/content', 'archives'); ?>
 
-        <?php get_template_part('template-parts/content', get_post_type()); ?>
+    <?php endwhile; else : ?>
 
-    <?php endwhile; ?>
-
-    <!-- Display the posts navigation -->
-    <?php
-    the_posts_navigation([
-        'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous', 'thedd'),
-        'next_text' => '<span class="nav-subtitle">' . esc_html__('Next', 'thedd'),
-    ]);
-    ?>
-
-<?php else : ?>
     <?php get_template_part('template-parts/content', 'none'); ?>
+
 <?php endif; ?>
 
 <!-- Nothing below here, edit footer content in footer.php -->
