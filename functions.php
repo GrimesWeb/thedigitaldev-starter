@@ -3,10 +3,19 @@
 // Enqueue scripts here
 function thedd_enqueued_files()
 {
+    /*
+    * CSS
+    */
     // Main CSS style for appearance > editor > style.css, enqueue everything below main-css
     wp_enqueue_style('default-css', get_stylesheet_uri());
     // Get main css stylesheet generated from SASS folder
     wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/assets/css/main.css', [], filemtime(get_stylesheet_directory() . '/assets/css/main.css'), false );
+
+     /*
+    * JS
+    */
+    // Enqueue theme js files here
+    wp_enqueue_script( 'theme-js', get_stylesheet_directory_uri() . '/assets/js/theme.js', ['jquery'], filemtime(get_stylesheet_directory() . '/assets/js/theme.js'), true );
 }
 add_action('wp_enqueue_scripts', 'thedd_enqueued_files');
 /***** NOTHING SNIPPETS BELOW HERE - ONLY INCLUDES *****/
